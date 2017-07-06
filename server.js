@@ -6,7 +6,7 @@ var app = express();
 
 //app.use(bodyParser.json());
 
-app.use(express.static(__dirname+"/../Mean-Stack1"));
+//app.use(express.static(__dirname+"/../Mean-Stack1"));
 
 app.get("/", function(req,res){
 	res.redirect("/index.html");
