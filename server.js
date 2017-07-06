@@ -12,5 +12,9 @@ app.get("/mongodb",function (req,res) {
     });
 });
 
-app.listen(8080);
-console.log("Server Started on Port No.8080");
+var port = process.env.port || 4444;
+
+app.listen(port);
+
+//app.listen(8080);
+console.log("Server Started on Port No.4444");
