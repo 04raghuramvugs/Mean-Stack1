@@ -21,9 +21,14 @@ app.get("/mongodb",function (req,res) {
     });
 });
 
-var port = process.env.port || 4444;
+//var port = process.env.port || 4444;
 
-app.listen(port);
+//app.listen(port);
+
+var server = app.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+ });
 
 //app.listen(8080);
 console.log("Server Started on Port No.4444");
