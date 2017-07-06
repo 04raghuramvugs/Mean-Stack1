@@ -6,7 +6,7 @@ var app = express();
 
 //app.use(bodyParser.json());
 
-app.use(express.static(__dirname+"/Mean-Stack1"));
+app.use(express.static(__dirname+"/../Mean-Stack1"));
 //app.use(app.router);
 
 app.get("/", function(req,res){
@@ -26,10 +26,12 @@ app.get("/mongodb",function (req,res) {
 
 //app.listen(port);
 
-var server = app.listen(process.env.PORT || 8080, function () {
+/*var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
- });
+ });*/
+
+ var port_number = app.listen(process.env.PORT || 3000);
 
 //app.listen(8080);
-console.log("Server Started on Port No.4444");
+console.log("Server Started on Port No.3000");
