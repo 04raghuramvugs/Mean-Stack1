@@ -1,7 +1,16 @@
 var mongodb = require("mongodb");
 var express = require("express");
+//var bodyParser = require("body-parser");
 var mongoClient = mongodb.MongoClient;
 var app = express();
+
+//app.use(bodyParser.json());
+
+app.use(express.static(__dirname+"/../Mean-Stack1"));
+
+app.get("/", function(req,res){
+	res.redirect("/index.html");
+})
 
 app.get("/mongodb",function (req,res) {
     mongoClient.connect("mongodb://raghuram:raghuram@ds121222.mlab.com:21222/emp1" , function (err,db) {
