@@ -31,8 +31,8 @@ app.get("/mongodb",function (req,res) {
     console.log("App now running on port", port);
  });*/
 
- app.listen(process.env.PORT || 3000, function(){
- 	console.log("Server Started on Port No.3000"); 	
+ app.listen(process.env.PORT || 3030, function(){
+ 	console.log("Server Started on Port No.3030"); 	
  });
 
 //app.listen(8080);
